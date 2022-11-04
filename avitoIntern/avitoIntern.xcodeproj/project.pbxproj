@@ -14,6 +14,11 @@
 		AD7091C029150D3400405711 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7091BF29150D3400405711 /* MainTableViewController.swift */; };
 		AD7091C229150D5500405711 /* MainTablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7091C129150D5500405711 /* MainTablePresenter.swift */; };
 		AD7091C429150D9700405711 /* MainTableInputOutputViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7091C329150D9700405711 /* MainTableInputOutputViewProtocols.swift */; };
+		AD7091C82915105400405711 /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7091C72915105400405711 /* MainTableView.swift */; };
+		AD7091CA2915115100405711 /* CompanyStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7091C92915115100405711 /* CompanyStruct.swift */; };
+		AD7091CE291511F100405711 /* CompanyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7091CD291511F100405711 /* CompanyTableViewCell.swift */; };
+		AD7091D02915131500405711 /* AvitoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7091CF2915131500405711 /* AvitoService.swift */; };
+		AD7091D3291513BE00405711 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7091D2291513BE00405711 /* Errors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		AD7091BF29150D3400405711 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		AD7091C129150D5500405711 /* MainTablePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTablePresenter.swift; sourceTree = "<group>"; };
 		AD7091C329150D9700405711 /* MainTableInputOutputViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableInputOutputViewProtocols.swift; sourceTree = "<group>"; };
+		AD7091C72915105400405711 /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
+		AD7091C92915115100405711 /* CompanyStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyStruct.swift; sourceTree = "<group>"; };
+		AD7091CD291511F100405711 /* CompanyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyTableViewCell.swift; sourceTree = "<group>"; };
+		AD7091CF2915131500405711 /* AvitoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvitoService.swift; sourceTree = "<group>"; };
+		AD7091D2291513BE00405711 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,7 @@
 		AD7091BB29150C7300405711 /* MainTable */ = {
 			isa = PBXGroup;
 			children = (
+				AD7091D12915133500405711 /* Helpers */,
 				AD7091BE29150CAF00405711 /* Model */,
 				AD7091BD29150CA700405711 /* View */,
 				AD7091BC29150C8D00405711 /* Presenter */,
@@ -89,8 +100,8 @@
 		AD7091BD29150CA700405711 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AD7091BF29150D3400405711 /* MainTableViewController.swift */,
-				AD7091C329150D9700405711 /* MainTableInputOutputViewProtocols.swift */,
+				AD7091CC291511CC00405711 /* AvitoCell */,
+				AD7091CB291511B800405711 /* MainTableView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -98,8 +109,52 @@
 		AD7091BE29150CAF00405711 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AD7091C92915115100405711 /* CompanyStruct.swift */,
+				AD7091CF2915131500405711 /* AvitoService.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AD7091C52915102100405711 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD7091C72915105400405711 /* MainTableView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AD7091C62915102D00405711 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD7091C329150D9700405711 /* MainTableInputOutputViewProtocols.swift */,
+				AD7091BF29150D3400405711 /* MainTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AD7091CB291511B800405711 /* MainTableView */ = {
+			isa = PBXGroup;
+			children = (
+				AD7091C52915102100405711 /* Views */,
+				AD7091C62915102D00405711 /* Controllers */,
+			);
+			path = MainTableView;
+			sourceTree = "<group>";
+		};
+		AD7091CC291511CC00405711 /* AvitoCell */ = {
+			isa = PBXGroup;
+			children = (
+				AD7091CD291511F100405711 /* CompanyTableViewCell.swift */,
+			);
+			path = AvitoCell;
+			sourceTree = "<group>";
+		};
+		AD7091D12915133500405711 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AD7091D2291513BE00405711 /* Errors.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,11 +227,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD7091CA2915115100405711 /* CompanyStruct.swift in Sources */,
+				AD7091C82915105400405711 /* MainTableView.swift in Sources */,
 				AD7091C229150D5500405711 /* MainTablePresenter.swift in Sources */,
 				AD7091A82915030200405711 /* AppDelegate.swift in Sources */,
+				AD7091D02915131500405711 /* AvitoService.swift in Sources */,
 				AD7091C029150D3400405711 /* MainTableViewController.swift in Sources */,
+				AD7091D3291513BE00405711 /* Errors.swift in Sources */,
 				AD7091AA2915030200405711 /* SceneDelegate.swift in Sources */,
 				AD7091C429150D9700405711 /* MainTableInputOutputViewProtocols.swift in Sources */,
+				AD7091CE291511F100405711 /* CompanyTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
