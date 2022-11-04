@@ -59,10 +59,7 @@ extension MainTableViewController: MainTableViewInput {
     
     func showError(error: String) {
         DispatchQueue.main.async {
-            let alert = UIAlertController(title: "Error", message:error, preferredStyle: .alert)
-            let actionOk = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alert.addAction(actionOk)
-            self.present(alert, animated: true, completion: nil)
+            self.mainTableView.showErrorView(description: error)
         }
     }
 

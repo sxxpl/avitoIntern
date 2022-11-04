@@ -8,6 +8,8 @@
 import UIKit
 
 class MainTableView: UIView {
+    
+    private var isNetworkErrorViewIsHidden = true
 
     var tableView:UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
@@ -25,6 +27,8 @@ class MainTableView: UIView {
         label.isHidden = true
         return label
     }()
+    
+    var networkErrorView = NetworkErrorView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -68,6 +72,30 @@ class MainTableView: UIView {
             emptyResultLabel.leftAnchor.constraint(equalTo: self.leftAnchor),
             emptyResultLabel.rightAnchor.constraint(equalTo: self.rightAnchor)
             ])
+    }
+    
+    func showErrorView(description: String){
+        
+        if isNetworkErrorViewIsHidden {
+            self.isNetworkErrorViewIsHidden = false
+            networkErrorView = NetworkErrorView(frame: CGRect(x: self.frame.width * 0.05, y: self.frame.height, width: self.frame.width * 0.9, height: self.frame.height * 0.1))
+            networkErrorView.networkErrorLabel.text = description
+            self.addSubview(networkErrorView)
+            
+            
+            UIView.animate(withDuration: 2, delay: 0) {
+                self.networkErrorView.frame.origin.y -= self.frame.height * 0.1 + self.frame.width*0.05
+            }
+            UIView.animate(withDuration: 1, delay: 5) {
+                if !self.isNetworkErrorViewIsHidden {
+                    self.networkErrorView.frame.origin.y += self.frame.height * 0.1 + self.frame.width*0.05
+                }
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 6.0){
+                self.isNetworkErrorViewIsHidden = true
+                self.networkErrorView.removeFromSuperview()
+            }
+        }
     }
 
 }

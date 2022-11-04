@@ -26,7 +26,7 @@ class AvitoService{
                 if error.localizedDescription == "The Internet connection appears to be offline." {
                     completion(.failure(Errors.internetError))
                 } else {
-                    completion(.failure(error))
+                    completion(.failure(Errors.otherConnectionError))
                 }
                 return
             }

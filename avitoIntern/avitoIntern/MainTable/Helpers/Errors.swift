@@ -10,4 +10,5 @@ import Foundation
 enum Errors:Error{
     case internetError
     case parsingError
+    case otherConnectionError
 }

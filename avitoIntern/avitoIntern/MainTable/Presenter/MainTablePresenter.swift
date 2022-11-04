@@ -31,8 +31,9 @@ class MainTablePresenter {
             case .failure(let error):
                 if error as? Errors == Errors.internetError {
                     self.viewInput?.showError(error: "Нет соединения с интернетом")
+                } else {
+                    self.viewInput?.showError(error: "Ошибка запроса")
                 }
-                self.viewInput?.showError(error: error.localizedDescription)
                 self.viewInput?.showNoResults()
                 break
             }

@@ -20,6 +20,7 @@
 		AD7091D02915131500405711 /* AvitoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7091CF2915131500405711 /* AvitoService.swift */; };
 		AD7091D3291513BE00405711 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7091D2291513BE00405711 /* Errors.swift */; };
 		AD7091D52915558900405711 /* CacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7091D42915558900405711 /* CacheService.swift */; };
+		AD7091DE291568EF00405711 /* NetworkErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7091DD291568EF00405711 /* NetworkErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		AD7091CF2915131500405711 /* AvitoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvitoService.swift; sourceTree = "<group>"; };
 		AD7091D2291513BE00405711 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		AD7091D42915558900405711 /* CacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheService.swift; sourceTree = "<group>"; };
+		AD7091DD291568EF00405711 /* NetworkErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		AD7091BB29150C7300405711 /* MainTable */ = {
 			isa = PBXGroup;
 			children = (
+				AD7091DB291568BF00405711 /* Services */,
 				AD7091D12915133500405711 /* Helpers */,
 				AD7091BE29150CAF00405711 /* Model */,
 				AD7091BD29150CA700405711 /* View */,
@@ -112,8 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				AD7091C92915115100405711 /* CompanyStruct.swift */,
-				AD7091CF2915131500405711 /* AvitoService.swift */,
-				AD7091D42915558900405711 /* CacheService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				AD7091C72915105400405711 /* MainTableView.swift */,
+				AD7091DD291568EF00405711 /* NetworkErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,6 +160,15 @@
 				AD7091D2291513BE00405711 /* Errors.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AD7091DB291568BF00405711 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AD7091D42915558900405711 /* CacheService.swift */,
+				AD7091CF2915131500405711 /* AvitoService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +245,7 @@
 				AD7091C82915105400405711 /* MainTableView.swift in Sources */,
 				AD7091C229150D5500405711 /* MainTablePresenter.swift in Sources */,
 				AD7091A82915030200405711 /* AppDelegate.swift in Sources */,
+				AD7091DE291568EF00405711 /* NetworkErrorView.swift in Sources */,
 				AD7091D02915131500405711 /* AvitoService.swift in Sources */,
 				AD7091C029150D3400405711 /* MainTableViewController.swift in Sources */,
 				AD7091D3291513BE00405711 /* Errors.swift in Sources */,
