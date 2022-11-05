@@ -21,6 +21,7 @@
 		AD7091D3291513BE00405711 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7091D2291513BE00405711 /* Errors.swift */; };
 		AD7091D52915558900405711 /* CacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7091D42915558900405711 /* CacheService.swift */; };
 		AD7091DE291568EF00405711 /* NetworkErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7091DD291568EF00405711 /* NetworkErrorView.swift */; };
+		AD7091E22916C4C800405711 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7091E12916C4C800405711 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		AD7091D2291513BE00405711 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		AD7091D42915558900405711 /* CacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheService.swift; sourceTree = "<group>"; };
 		AD7091DD291568EF00405711 /* NetworkErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorView.swift; sourceTree = "<group>"; };
+		AD7091E12916C4C800405711 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			children = (
 				AD7091D42915558900405711 /* CacheService.swift */,
 				AD7091CF2915131500405711 /* AvitoService.swift */,
+				AD7091E12916C4C800405711 /* NetworkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				AD7091AA2915030200405711 /* SceneDelegate.swift in Sources */,
 				AD7091C429150D9700405711 /* MainTableInputOutputViewProtocols.swift in Sources */,
 				AD7091CE291511F100405711 /* CompanyTableViewCell.swift in Sources */,
+				AD7091E22916C4C800405711 /* NetworkService.swift in Sources */,
 				AD7091D52915558900405711 /* CacheService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

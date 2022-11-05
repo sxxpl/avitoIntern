@@ -10,8 +10,20 @@ import UIKit
 class MainTablePresenter {
     
     let avitoService = AvitoService()
+    
+    var isCompaniesArePresented = false
         
     weak var viewInput: (UIViewController & MainTableViewInput)?
+    
+    init() {
+        NotificationCenter.default.addObserver(self, selector: #selector(downloadWhenTheInternetAppears(notification:)), name: NSNotification.Name.connectivityStatus, object: nil)
+    }
+    
+    @objc func downloadWhenTheInternetAppears(notification: Notification) {
+        if NetworkMonitor.shared.isConnected && !isCompaniesArePresented {
+            loadEmployees()
+        }
+    }
     
     private func loadEmployees(){
         avitoService.loadCompany { result in
@@ -33,6 +45,10 @@ class MainTablePresenter {
                     self.viewInput?.showError(error: "Нет соединения с интернетом")
                 } else {
                     self.viewInput?.showError(error: "Ошибка запроса")
+                }
+                self.viewInput?.employers = [:]
+                DispatchQueue.main.async {
+                    self.viewInput?.title = ""
                 }
                 self.viewInput?.showNoResults()
                 break

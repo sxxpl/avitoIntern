@@ -15,16 +15,21 @@ class AvitoService{
         
         let urlString = "https://run.mocky.io/v3/1d1cb4ec-73db-4762-8c4b-0b8aa3cecd4c"
         
-        if let company = cacheService.getEmplFromCache(url: urlString) {
-            completion(.success(company))
+        if !NetworkMonitor.shared.isConnected {
+            if let company = cacheService.getEmplFromCache(url: urlString) {
+                completion(.success(company))
+            } else {
+                completion(.failure(Errors.internetError))
+            }
             return
         }
         
+        
         let url = URL(string: urlString)!
         URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
-            if let error = error {
-                if error.localizedDescription == "The Internet connection appears to be offline." {
-                    completion(.failure(Errors.internetError))
+            if let _ = error {
+                if let company = self.cacheService.getEmplFromCache(url: urlString) {
+                    completion(.success(company))
                 } else {
                     completion(.failure(Errors.otherConnectionError))
                 }

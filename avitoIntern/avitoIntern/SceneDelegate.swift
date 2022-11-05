@@ -25,6 +25,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.overrideUserInterfaceStyle = .light
         window.makeKeyAndVisible()
         self.window = window
+        
+        NetworkMonitor.shared.startMonitoring()
+
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
