@@ -74,11 +74,8 @@
 		AD7091A62915030200405711 /* avitoIntern */ = {
 			isa = PBXGroup;
 			children = (
+				AD7091E32916F37500405711 /* AppFiles */,
 				AD7091BB29150C7300405711 /* MainTable */,
-				AD7091A72915030200405711 /* AppDelegate.swift */,
-				AD7091A92915030200405711 /* SceneDelegate.swift */,
-				AD7091B02915030400405711 /* Assets.xcassets */,
-				AD7091B22915030400405711 /* LaunchScreen.storyboard */,
 				AD7091B52915030400405711 /* Info.plist */,
 			);
 			path = avitoIntern;
@@ -172,6 +169,17 @@
 				AD7091E12916C4C800405711 /* NetworkService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		AD7091E32916F37500405711 /* AppFiles */ = {
+			isa = PBXGroup;
+			children = (
+				AD7091B22915030400405711 /* LaunchScreen.storyboard */,
+				AD7091B02915030400405711 /* Assets.xcassets */,
+				AD7091A92915030200405711 /* SceneDelegate.swift */,
+				AD7091A72915030200405711 /* AppDelegate.swift */,
+			);
+			path = AppFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

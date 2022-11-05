@@ -27,7 +27,7 @@ class NetworkErrorView: UIView {
     
     
     private func configureUI() {
-        self.backgroundColor = .red
+        self.backgroundColor = .systemRed
         self.addSubview(networkErrorLabel)
         
         NSLayoutConstraint.activate([
@@ -46,7 +46,7 @@ class NetworkErrorView: UIView {
     
     override func layoutSubviews() {
         self.layer.masksToBounds = false
-        self.layer.cornerRadius = self.frame.width / 15
+        self.layer.cornerRadius = self.frame.height / 2.5
     }
 
 }

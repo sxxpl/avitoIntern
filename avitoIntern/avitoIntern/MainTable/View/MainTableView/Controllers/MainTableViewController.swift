@@ -53,6 +53,10 @@ class MainTableViewController: UIViewController {
         mainTableView.tableView.refreshControl?.endRefreshing()
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        mainTableView.networkErrorView.removeFromSuperview()
+    }
+    
 }
 
 extension MainTableViewController: MainTableViewInput {

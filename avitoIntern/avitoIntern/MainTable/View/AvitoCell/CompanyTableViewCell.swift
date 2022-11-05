@@ -51,16 +51,16 @@ class CompanyTableViewCell: UITableViewCell {
         
         NSLayoutConstraint.activate([
             nameLabel.topAnchor.constraint(equalTo: contentView.readableContentGuide.topAnchor,constant: 5),
-            nameLabel.leftAnchor.constraint(equalTo: contentView.readableContentGuide.leftAnchor,constant: 5),
-            nameLabel.rightAnchor.constraint(equalTo: contentView.readableContentGuide.rightAnchor,constant: -5),
+            nameLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor,constant: 20),
+            nameLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor,constant: -20),
             
             phoneLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor,constant: 5),
-            phoneLabel.leftAnchor.constraint(equalTo: contentView.readableContentGuide.leftAnchor,constant: 5),
-            phoneLabel.rightAnchor.constraint(equalTo: contentView.readableContentGuide.rightAnchor,constant: -5),
+            phoneLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor,constant: 20),
+            phoneLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor,constant: -20),
             
             skillsLabel.topAnchor.constraint(equalTo: phoneLabel.bottomAnchor,constant: 5),
-            skillsLabel.leftAnchor.constraint(equalTo: contentView.readableContentGuide.leftAnchor,constant: 5),
-            skillsLabel.rightAnchor.constraint(equalTo: contentView.readableContentGuide.rightAnchor,constant: -5),
+            skillsLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor,constant: 20),
+            skillsLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor,constant: -20),
             skillsLabel.bottomAnchor.constraint(equalTo: contentView.readableContentGuide.bottomAnchor,constant: -5)
         ])
     }
