@@ -87,7 +87,7 @@ class MainTableView: UIView {
                 self.networkErrorView.frame.origin.y -= self.frame.height * 0.1 + self.frame.width*0.05
             }
             
-            UIView.animate(withDuration: 1, delay: 5) {
+            UIView.animate(withDuration: 1, delay: 3) {
                 if !self.isNetworkErrorViewIsHidden {
                     self.networkErrorView.frame.origin.y += self.frame.height * 0.1 + self.frame.width*0.05
                 }

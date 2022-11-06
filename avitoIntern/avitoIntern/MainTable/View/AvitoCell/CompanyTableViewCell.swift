@@ -13,14 +13,14 @@ class CompanyTableViewCell: UITableViewCell {
 
     var nameLabel:UILabel = {
         var label = UILabel()
-        label.font = .preferredFont(forTextStyle: .title3)
+        label.font = .preferredFont(forTextStyle: .title2)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     var phoneLabel:UILabel = {
         var label = UILabel()
-        label.font = .preferredFont(forTextStyle: .callout)
+        label.font = .preferredFont(forTextStyle: .body)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
