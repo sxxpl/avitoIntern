@@ -67,7 +67,7 @@ class MainTableView: UIView {
             tableView.leftAnchor.constraint(equalTo: self.leftAnchor),
             tableView.rightAnchor.constraint(equalTo: self.rightAnchor),
             
-            emptyResultLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            emptyResultLabel.topAnchor.constraint(equalTo: self.topAnchor),
             emptyResultLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             emptyResultLabel.leftAnchor.constraint(equalTo: self.leftAnchor),
             emptyResultLabel.rightAnchor.constraint(equalTo: self.rightAnchor)
@@ -86,14 +86,16 @@ class MainTableView: UIView {
             UIView.animate(withDuration: 2, delay: 0) {
                 self.networkErrorView.frame.origin.y -= self.frame.height * 0.1 + self.frame.width*0.05
             }
+            
             UIView.animate(withDuration: 1, delay: 5) {
                 if !self.isNetworkErrorViewIsHidden {
                     self.networkErrorView.frame.origin.y += self.frame.height * 0.1 + self.frame.width*0.05
                 }
             }
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 6.0){
-                self.isNetworkErrorViewIsHidden = true
                 self.networkErrorView.removeFromSuperview()
+                self.isNetworkErrorViewIsHidden = true
             }
         }
     }
